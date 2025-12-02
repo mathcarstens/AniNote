@@ -1,0 +1,98 @@
+:root {
+  --bg: #0f1720;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa7b7;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; font-family: Inter, system-ui, Arial, sans-serif; background: var(--bg); color: var(--text); }
+
+a { color: inherit; }
+img { display: block; }
+main { padding: 1rem; max-width: 1100px; margin: 0 auto; }
+
+/* Adicione ao final de src/index.css */
+
+/* Container */
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  color: var(--text);
+}
+
+/* Título e busca */
+.home-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.home-search {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+}
+
+/* Grid: 3 colunas em desktop, 2 tablet, 1 mobile */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Card */
+.anime-link { text-decoration: none; color: inherit; }
+.anime-card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.anime-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* Thumb (imagem em cima) */
+.anime-thumb {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #000;
+}
+.anime-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Info (título e ano embaixo) */
+.anime-info {
+  padding: 10px 12px;
+  text-align: center;
+}
+.anime-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+.anime-year {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .anime-grid { grid-template-columns: repeat(2, 1fr); }
+  .anime-thumb { height: 200px; }
+}
+@media (max-width: 560px) {
+  .anime-grid { grid-template-columns: repeat(1, 1fr); }
+  .anime-thumb { height: 300px; }
+}
