@@ -62,3 +62,4 @@ export default function Home() {
     </div>
   );
 }
+// Possui links que levam para a página de detalhes

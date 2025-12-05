@@ -21,3 +21,7 @@ function App() {
 }
 
 export default App;
+// Define as rotas do site
+// Importa componentes globais ex: header e navbar
+// Renderiza as páginas conforme o endereço da URL
+
